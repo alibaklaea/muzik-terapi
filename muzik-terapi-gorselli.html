@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapay Zeka Destekli Müzik Terapisi</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; margin: 0; padding: 0; }
+    header { background-color: #5a2a83; color: white; padding: 20px; text-align: center; }
+    nav { background-color: #eee; padding: 10px; text-align: center; }
+    nav a { margin: 0 15px; color: #5a2a83; text-decoration: none; font-weight: bold; }
+    section { padding: 30px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 10px; }
+    h2 { color: #5a2a83; }
+    footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
+    img { max-width: 100%; border-radius: 10px; margin-top: 15px; }
+
+    .makam { margin-top: 10px; }
+    .makam button {
+      background-color: #5a2a83;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .makam-info {
+      display: none;
+      padding: 10px;
+      background-color: #f1f1f1;
+      margin-bottom: 15px;
+      border-left: 5px solid #5a2a83;
+    }
+  </style>
+  <script>
+    function toggleMakam(id) {
+      var x = document.getElementById(id);
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Yapay Zeka Destekli Müzik Terapisi</h1>
+    <p>TÜBİTAK 4006 Bilim Fuarı Projesi | Kahramankazan BİLSEM</p>
+  </header>
+  <nav>
+    <a href="#giris">Giriş</a>
+    <a href="#kullanim">Kullanım</a>
+    <a href="#makamlar">Makamlar</a>
+    <a href="#sozlu">Sözlü / Sözsüz</a>
+    <a href="#ornek">Örnek</a>
+  </nav>
+
+  <section id="giris">
+    <h2>1. Giriş</h2>
+    <p>Bu dijital rehber, Osmanlı dönemindeki müzikle tedavi geleneğini modern yapay zeka teknolojisiyle birleştirerek bireylerin ruh sağlığını desteklemeyi hedefler.</p>
+    <img src="giris.png" alt="Giriş görseli">
+  </section>
+
+  <section id="kullanim">
+    <h2>2. Kullanım Yönergesi</h2>
+    <p>Ruh halinizi yazın, sistem sizin için bir makam, geleneksel eser ve modern parça önersin. Sözlü ya da enstrümantal tercihini belirtmeyi unutmayın.</p>
+    <img src="kullanim.png" alt="Kullanım görseli">
+  </section>
+
+  <section id="makamlar">
+    <h2>3. Ruh Hali - Makam - Müzik Önerileri</h2>
+
+    <div class="makam">
+      <button onclick="toggleMakam('rast')">🎵 Rast Makamı</button>
+      <div id="rast" class="makam-info">
+        <strong>Durum:</strong> Endişe, Kaygı <br>
+        <strong>Osmanlı Eseri:</strong> Rast Peşrevi – Itri<br>
+        <strong>Modern:</strong> Candan Erçetin – Elbette, Kalben – Sadece, Mabel Matiz – A Canım
+      </div>
+
+      <button onclick="toggleMakam('hicaz')">🎵 Hicaz Makamı</button>
+      <div id="hicaz" class="makam-info">
+        <strong>Durum:</strong> Melankoli, Yalnızlık <br>
+        <strong>Osmanlı Eseri:</strong> Hicaz Taksimi – Dede Efendi<br>
+        <strong>Modern:</strong> Teoman – Paramparça, Sezen Aksu – Tükeneceğiz, Mor ve Ötesi – Bir Derdim Var
+      </div>
+
+      <button onclick="toggleMakam('ussak')">🎵 Uşşak Makamı</button>
+      <div id="ussak" class="makam-info">
+        <strong>Durum:</strong> Enerji Düşüklüğü <br>
+        <strong>Osmanlı Eseri:</strong> Uşşak Makamı İlahi<br>
+        <strong>Modern:</strong> MFÖ – Ele Güne Karşı, Sertab Erener – Kumsalda, Athena – Her Şey Güzel Olacak
+      </div>
+
+      <button onclick="toggleMakam('segah')">🎵 Segâh Makamı</button>
+      <div id="segah" class="makam-info">
+        <strong>Durum:</strong> Ruhsal Dengesizlik <br>
+        <strong>Osmanlı Eseri:</strong> Segâh Makamı Medhal<br>
+        <strong>Modern:</strong> Kenan Doğulu – Aşk ile Yap, Gaye Su Akyol – İstikrarlı Hayal Hakikattir, Melike Şahin – Diva Yorgun
+      </div>
+    </div>
+    <img src="makamlar.png" alt="Makam bilgisi görseli">
+  </section>
+
+  <section id="sozlu">
+    <h2>4. Sözlü mü Enstrümantal mi?</h2>
+    <p>Sözlü eserler duyguları dışa vurmayı kolaylaştırırken, enstrümantal müzik zihinsel dinlenme sağlar. Duygu yoğunluğuna göre tercih yapabilirsiniz.</p>
+    <img src="sozlu.png" alt="Sözlü müzik görseli">
+    <img src="sozsuz.png" alt="Sözsüz müzik görseli">
+  </section>
+
+  <section id="ornek">
+    <h2>5. Örnek Kullanım</h2>
+    <p><em>Kullanıcı:</em> "Çok gerginim."<br>
+       <em>Sistem:</em> Rast makamı önerilir. Osmanlı: Rast Peşrevi. Modern: Elbette, Sadece, A Canım.</p>
+    <img src="ornek.png" alt="Örnek kullanım görseli">
+  </section>
+
+  <footer>
+    &copy; 2025 Kahramankazan BİLSEM | Danışman Öğretmen: Uğur ERKOÇ
+  </footer>
+</body>
+</html>
